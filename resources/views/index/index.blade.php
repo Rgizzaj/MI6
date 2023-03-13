@@ -1,3 +1,7 @@
+@viteReactRefresh
+@vite('resources/js/front.jsx')
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
