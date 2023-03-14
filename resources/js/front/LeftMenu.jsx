@@ -1,29 +1,32 @@
-import { useState } from "react";
+import { useState } from "react"
 
-export default function LeftMenu({open, setOpen}){
+export default function LeftMenu() {
 
+    const [hidden, setHidden] = useState(false);
 
+    return (
+        <nav className={ `left-menu${hidden ? ' left-menu--hidden' : ''}` }>
 
+            <div
+                className="left-menu__visibility-toggle"
+                onClick={ () => setHidden(!hidden) }
+            >
+                { hidden ? '>' : '<' }
+            </div>
 
-    
-     const style={
-          width:open ? 250 : 0, 
-          marginLeft: open ? 250 : 0,
+            <div className="left-menu__content">
 
- }
+                <div className="left-menu__header">
+                    <img className="left-menu__seal" src="/img/mi6-seal.png" alt="MI6 seal" />
+                </div>
 
-     return(
+                <div className="left-menu__links">
+                    <a href="#">Home</a>
+                    <a href="#">People of interest</a>
+                </div>
 
-        <div id="sideNav" className="side-navigation" style={style}>
+            </div>
 
-        <a href="javascript:void(0)" className="closebtn" onClick={() => { setOpen(false)}}>&times;</a>
-  
-        <h2><a href="#">Home</a></h2>
-        <h2><a href="#">People of intereset</a></h2>
-
-        
-
-      </div>
-
-     )
+        </nav>
+    )
 }

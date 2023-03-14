@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './MI6/resources/js/front/App.jsx'
+import App from './front/App.jsx'
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('app')).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
