@@ -18,5 +18,3 @@ use Spatie\FlareClient\Api;
 
 
 Route::get('/', [IndexController::class, 'index'])->name('homepage');
-Route::get('/test', [Api\ApiController::class, 'search']);
-

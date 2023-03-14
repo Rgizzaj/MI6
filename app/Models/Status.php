@@ -13,6 +13,4 @@ class Status extends Model
     {
         return $this->hasMany(Person::class);
     }
-
-    
 }
