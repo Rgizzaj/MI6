@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/people', [PersonController::class, 'index'])->name('api.people');
+Route::get('/statuses', [StatusController::class, 'index'])->name('api.statuses');
