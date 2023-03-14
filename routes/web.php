@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\ApiController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
-use Spatie\FlareClient\Api;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +14,4 @@ use Spatie\FlareClient\Api;
 |
 */
 
-
 Route::get('/', [IndexController::class, 'index'])->name('homepage');
-Route::get('/test', [Api\ApiController::class, 'search']);
-
